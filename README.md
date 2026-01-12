@@ -1,6 +1,6 @@
 > **Note:** To access all shared projects, get information about environment setup, and view other guides, please visit [Explore-In-HMOS-Wearable Index](https://github.com/Explore-In-HMOS-Wearable/hmos-index).
 
-# How to use Brightness
+# How to use Crypto Framework
 
 You can refer this application to learn how to use crypto framework for Huawei Sport Watch models.
 
@@ -25,9 +25,10 @@ You can refer this application to learn how to use crypto framework for Huawei S
 - **Tools**: DevEco Studio Vers 5.1.0.842
 - **Libraries**:'@ohos.security.cryptoFramework
 
+# Directory Structure
 ```
  config.json
-│   
+│
 ├───js
 │   └───MainAbility
 │       │   app.js

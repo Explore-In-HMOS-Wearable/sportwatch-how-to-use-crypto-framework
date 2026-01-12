@@ -2,7 +2,7 @@ import cryptoFramework from '@ohos.security.cryptoFramework';
 
 export default {
     data: {
-        result: 'Waiting operation',
+        result: 'Waiting operation'
     },
 
     sha256() {
@@ -11,10 +11,10 @@ export default {
         md.update({ data: stringToUint8Array('cryptoFramework') }, function (err) {
             md.digest(function (err, digestOutput) {
                 if (err) {
-                    that.result = 'SHA256 Error:\n' + err.code
+                    that.result = `SHA256 Error:\n ${err.code}`
                     return;
                 }
-                that.result = 'SHA256 Result:\n' + digestOutput.data.toString()
+                that.result = `SHA256 Result:\n ${digestOutput.data.toString()}`
             });
         });
     },
@@ -24,23 +24,22 @@ export default {
         md.update({ data: stringToUint8Array('cryptoFramework') }, function (err) {
             md.digest(function (err, digestOutput) {
                 if (err) {
-                    that.result = 'MD5 Error:\n' + err.code
+                    that.result = `MD5 Error:\n${err.code}`
                     return;
                 }
-                that.result = 'MD5 Result:\n' + digestOutput.data.toString()
+                that.result = `MD5 Result:\n${digestOutput.data.toString()}`
             });
         });
     },
 
     createRandom() {
         this.result =
-            'Random Result:\n' +
-            cryptoFramework
+            `Random Result:\n${cryptoFramework
                 .createRandom()
                 .generateRandomSync(16)
                 .data
-                .toString()
-    },
+                .toString()}`
+    }
 };
 
 function stringToUint8Array(string) {
